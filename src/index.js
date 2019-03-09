@@ -1,4 +1,4 @@
-// import "bootstrap-webpack!./bootstrap.config.js";
+import "bootstrap-webpack!../js/bootstrap.config.js";
 
 import "../less/head.less";
 import "../less/usercenter.less";
