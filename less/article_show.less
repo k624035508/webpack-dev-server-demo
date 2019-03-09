@@ -1,0 +1,54 @@
+/*article_show.less（文章）*/
+@import "common-style";
+
+body { background: @body-color; }
+
+.article-content {
+	min-height: 625px;
+	background: @white;
+	border: @border;
+	padding: 30px;
+	.article-th {
+		color: @darker-grey;
+		font-size: @font20;
+		font-weight: bold;
+		padding: 0 10px;
+		letter-spacing: 1px;
+	}
+	.article-th-secondary {
+		padding: 15px 10px 5px 10px;
+		border-bottom: @border-dashed;
+		span {
+			color: @grey;
+			font-size: @font13;
+		}
+	}
+	.content-body {
+		margin-top: 30px;
+		.basic-article {
+			.img-wrap{
+				text-align: center;
+				img { max-width: 100%; }
+				margin-bottom: 40px;
+			}
+			p {
+				margin: 0;
+				font-size: @font15;
+				line-height: 28px;
+			}
+			h4 {
+				margin: 15px 0;
+				color: @darker-grey;
+				font-size: @font18;
+			}
+			table {
+				margin: 35px 0;
+				th, td { text-align: center; }
+			}
+			.sender {
+				margin-top: 110px;
+				p { text-align: right; }
+			}
+		}
+	}
+}

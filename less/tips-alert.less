@@ -1,0 +1,51 @@
+/*tips-alert.less(弹窗样式)*/
+@import "common-style";
+
+.custom-dlg {
+	.modal-dialog {
+		width: 360px;
+		margin: 30px auto; // 防止 ie8 不支持媒体查询
+		.modal-content {
+			.modal-header {
+				padding: 8px 15px;
+				h4 {
+					color: @darker-grey;
+					font-size: @font13;
+					font-weight: bold;
+				}
+			}
+			.modal-body {
+				padding: 30px 15px;
+				font-size: @font15;
+				text-align: center;
+			}
+			.modal-footer {
+				text-align: center;
+				padding: 5px 0;
+				border-top: none;
+				background: @body-color;
+				border-bottom-left-radius: 6px;
+				border-bottom-right-radius: 6px;
+				button {
+					width: 70px;
+					height: 25px;
+					color: @white;
+					border: none;
+					border-radius: 4px;
+					background: @red;
+					padding: 0;
+				}
+				.cancel-btn {
+					background: #d6d6d6;
+					color: @dark-grey;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+#tipsAlert, #tipsConfirm {
+	.custom-dlg;
+	z-index: 9999;
+}

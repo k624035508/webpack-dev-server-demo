@@ -1,0 +1,53 @@
+/*invitation.less（会员中心推荐奖励）*/
+@import "../less/common-style.less";
+@import "../less/usercenter-common-style.less";
+
+@recommend: "../imgs/usercenter/recommend";
+
+.recommend-wrap {
+	* {
+		color: @dark-grey;
+		font-size: @font15;
+	}
+	.recommend-link {
+		& > * { .inline-block; }
+		.site-link {
+			width: 500px;
+			height: 40px;
+			line-height: 39px;
+			padding-left: 10px;
+			margin: 0 15px 0 5px;
+			border: @border;
+			border-radius: 4px;
+		}
+		a {
+			width: 100px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: @white;
+			border-radius: 4px;
+			background: @red;
+			text-decoration: none;
+		}
+	}
+	.invited-th { .th-grey-style; }
+	.table-wrap {
+		height: 250px;
+		margin: 30px 0;
+		table {
+			th {
+				font-weight: normal;
+				border-bottom: 2px solid @blue;
+			}
+			td {
+				border-top: none;
+				border-bottom: 1px solid @blue;
+			}
+			th, td { text-align: center; }
+			tbody tr:hover { background: #f1f5ff; }
+		}
+	}
+	.warm-tips-th { .th-grey-style; }
+	.warmTips { .warm-tips-style; }
+}

@@ -1,0 +1,39 @@
+/*myaccount.less（会员中心账户总览）*/
+@import "../less/common-style.less";
+@import "../less/usercenter-common-style.less";
+
+.overview-wrap {
+	#data-pie {
+		margin-top: -15px;
+		height: 335px;
+	}
+	.total-amount {
+		position: relative;
+		width: 200px;
+		height: 65px;
+		top: -200px;
+		left: 50%;
+		*left: 47%;
+		margin-left: -100px;
+		text-align: center;
+		p {
+			font-size: @font15;
+			color: @dark-grey;
+			span:first-child {
+				font-size: @font22;
+			}
+		}
+	}
+	.recommend-project { .th-grey-style; }
+	.invest-cell-custom {
+		width: auto;
+		margin-top: 40px;
+		.invest-content {
+			.apr { width: 17%; }
+			.deadline { width: 17%; }
+			.sum { width: 25%; }
+			.repayment { width: 25%; }
+			.invest-btn { width: 16%; }
+		}
+	}
+}

@@ -1,0 +1,667 @@
+﻿/*project.less(标书)*/
+@import "common-style";
+@images: "../imgs/index";
+@content-margin: 35px 38px;
+
+body {
+	background: @body-color;
+}
+
+div.breadcrumbs {
+	width: @min-width;
+	font-size: @font15;
+	margin: 20px auto;
+	color: @darker-grey;
+	a {
+		color: @darker-grey;
+        text-decoration: none;
+        &:hover { color: @red; }
+	}
+}
+
+.tender-face-block {
+	display: inline-block;
+	height: 100%;
+	border: @border;
+	background: @white;
+}
+
+.title-mark {
+	*clear: left;
+	height: 30px;
+	line-height: 30px;
+	color: @white;
+	font-size: @font18;
+	padding: 3px 15px;
+	background: @blue;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+div.tender-content {
+	width: @min-width;
+	height: 330px;
+	margin: 0 auto;
+	.tender-face {
+		width: 780px;
+		.tender-face-block;
+		.invest-title {
+			padding: 14px 15px;
+			border-bottom: @border-dashed;
+			& > * {
+				.inline-block;
+			}
+			span {
+				font-size: @font20;
+				color: @blue;
+			}
+            span.invest-plus{
+                width:55px;
+                height:30px;
+                margin-left:20px;
+                text-align:center;
+                font-size:@font15;
+                line-height:30px;
+                font-weight:bold;
+                color:#fff;
+                background:@red;
+            }
+		}
+		.invest-rules {
+			height: 120px;
+			padding: 18px 0;
+			border-bottom: @border-dashed;
+			& > * {
+				.inline-block;
+				float: left;
+				width: 33.333%;
+				*width: 33%;
+				height: 100%;
+				padding: 5px 0;
+				text-align: center;
+			}
+			.sum, .deadline {
+				border-right: @border;
+			}
+			.sum div:first-child, .deadline div:first-child, .apr div:first-child {
+				font-size: @font18;
+				color: @grey;
+			}
+			.rules-style {
+				font-size: @font25;
+				color: @red;
+				margin-top: 15px;
+				span {
+					font-size: @font15;
+				}
+			}
+		}
+		.repayment {
+			padding: 19.5px 45px;
+			*padding: 0 45px;
+			& > * {
+				.inline-block;
+				float: left;
+				width: 50%;
+			}
+			.repayment-way {
+				table tbody > tr {
+					& td {
+						padding: 8px 20px 8px 0;
+						font-size: @font15;
+					}
+					& td:first-child {
+						color: @grey;
+					}
+					& td:last-child {
+						color: @darker-grey;
+					}
+				}
+			}
+			.interest-way {
+				.repayment-way;
+				padding-left: 105px;
+				*padding-left: 45px;
+			}
+		}
+	}
+	.invest-control {
+		width: 295px;
+		height: 100%;
+		*height: 85% !important;
+		padding: 25px 0;
+		.tender-face-block;
+		.btn-common {
+			width: 100%;
+			height: 40px;
+			font-size: @font18;
+			border: none;
+			border-radius: 4px;
+		}
+		.investable-amount-wrap {
+			padding: 0 18px;
+			.investable-amount {
+				margin: 25px 0;
+				font-size: @font40;
+				color: @red;
+				text-align: center;
+				span {
+					font-size: @font20;
+				}
+			}
+			.account-balance {
+				//未满标 登录后
+				& div, & input {
+					margin-bottom: 18px;
+				}
+				& span {
+					font-size: @font18;
+					color: @darker-grey;
+				}
+				& a {
+					font-size: @font18;
+					color: @blue;
+				}
+				& input {
+					width: 100%;
+					*width: 91%;
+					height: 40px;
+					padding: 0 10px;
+					border: @border;
+					border-radius: 4px;
+				}
+
+				& .investing-btn {
+					color: @white;
+					background: @red;
+				}
+				.tips {
+					font-size: @font15;
+					color: @darker-grey;
+				}
+			}
+			//投资确认弹窗样式
+			.investConfirm-dialog {
+				left: 50%;
+				margin: 50px 0 0 -370px;
+				.titleSpan {
+					display: inline-block;
+					width: 110px;
+					margin-right: 20px;
+					line-height: 40px;
+					text-align: right;
+				}
+				.modal-content {
+					width: 600px;
+					padding: 0 15px 10px 15px;
+					.modal-header {
+						h4 { font-weight: bold; }
+					}
+					.modal-body {
+						ul {
+							font-size: @font15;
+							color: @dark-grey;
+							li {                             
+								& span:first-child { .titleSpan; }
+								.rate { color: @red; }
+							}
+						}
+					}
+					.profit-wrap {
+						font-size: @font15;
+						color: @dark-grey;
+						padding: 12px 15px;
+						margin-bottom: 18px;
+						border-top: 1px dashed #e5e5e5;
+						border-bottom: 1px dashed #e5e5e5;
+						& span:first-child { .titleSpan; }
+						.profit { color: @red; }
+					}
+                    .jiangquan{ padding-left:50px;
+                        span{font-size:15px; color:#646464; }
+                        ul{      margin-left:0; margin-top:17px;  
+                                                 
+                            .interest-rate-ticket{
+                               background:url("../imgs/projects/blue.png") no-repeat; margin-right:36px; margin-bottom:5px;
+				width:220px; height:100px;
+                &>div{display:inline-block; float:left;}
+                .lottery-title{ width:40px; font-size:20px; color:@white; padding-left:8px; line-height:25px; padding-top:10px;}
+                .lottery-face{width:160px; padding-left:19px;
+                              .lottery-value{ margin-bottom:0;
+                                  span{
+                                      color:@blue; font-size:20px;
+                                  }
+                                  span:first-child{ font-size:40px; margin-right:3px;}
+                              }
+                              .use-condition{ margin-bottom:0; margin-top:-3px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                              .use-date{ margin-bottom:0; margin-top:-2px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                }
+                            }
+                            .hongbao{
+                               background:url("../imgs/projects/red.png") no-repeat; margin-right:36px; margin-bottom:5px;
+                width:220px; height:100px;
+                &>div{display:inline-block; float:left;}
+                .lottery-title{ width:40px; font-size:20px; color:@white; padding-left:8px; line-height:35px; padding-top:15px;}
+                .lottery-face{width:160px; padding-left:19px;
+                              .lottery-value{ margin-bottom:0;
+                                  span{
+                                      color:@red; font-size:20px;
+                                  }
+                                  span:first-child{ font-size:40px; margin-right:3px;}
+                              }
+                              .use-condition{ margin-bottom:0; margin-top:-3px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                              .use-date{ margin-bottom:0; margin-top:-2px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                }
+                            }
+                            .selecting-rate{background:url("../imgs/projects/011.png") no-repeat;}
+                            .selecting-hongbao{background:url("../imgs/projects/010.png") no-repeat;}
+                        }
+                    }
+					.agreement {
+						font-size: @font13;
+						color: @dark-grey;
+						margin-top: 35px;
+						input {
+							display: inline-block;
+							-webkit-appearance: none;
+							width: 15px;
+							height: 15px;
+							margin: 0 7px 0 28px;
+							border: @border;
+							border-radius: 0;
+							outline: none;
+							&:checked { background: url("../imgs/register/red-tick.png") no-repeat; }
+						}
+						label {
+							color: @grey;
+							font-weight: normal;
+						}
+						span { color: @grey; }
+						a { color: @red; }
+					}
+					.modal-footer {
+						text-align: center;
+						border-top: 0;
+						padding: 0;
+						margin: 35px auto;
+						button {
+							margin: 0 15px;
+							width: 100px;
+							height: 35px;
+							font-size: @font15;
+							border: none;
+							border-radius: 4px;
+						}
+						.confirm-btn {
+							color: @white;
+							background: @red;
+						}
+						.cancel-btn {
+							color: @dark-grey;
+							background: #e6e6e6;
+						}
+					}
+					p {
+						color: @dark-grey;
+						font-size: @font13;
+						a, i { color: @red; }
+						i {
+							margin-right: 8px;
+							font-size: @font13;
+							font-weight: bold;
+							font-style: normal;
+							vertical-align: middle;
+						}
+					}
+				}
+
+			}
+
+			.account-balance-unlogin {
+				//未满标 未登录
+				div {
+					margin: 30px 0 25px 0;
+					font-size: @font18;
+					color: @darker-grey;
+				}
+				.register-btn {
+					.account-balance .investing-btn;
+				}
+				span {
+					display: block;
+					margin-top: 20px;
+					font-size: @font15;
+					text-align: center;
+					& a {
+						font-size: @font15;
+						color: @blue;
+					}
+				}
+			}
+			.account-balance-empty {
+				//满标
+				.tips {
+					font-size: @font15;
+					line-height: 30px;
+					margin-bottom: 28px;
+				}
+				& .empty-btn {
+					color: @darker-grey;
+					background: @light-grey;
+					border-color: @light-grey;
+				}
+			}
+		}
+	}
+}
+
+.invest-list-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.jian-icon { background: url("@{images}/jian.png") no-repeat; }
+
+.xin-icon { background: url("@{images}/xin.png") no-repeat; }
+
+.yue-icon { background: url("@{images}/yue.png") no-repeat; }
+
+div.repayment .progress-custom {
+	width: 140px;
+	height: 10px;
+	margin-bottom: 0;
+}
+
+//项目内容
+div.project-content-wrap {
+	width: @min-width;
+	background: @white;
+	border: @border;
+	padding: 35px 0;
+	margin: 35px auto 50px auto;
+	& > div {
+		.inline-block;
+		float: left;
+	}
+	.project-content-left {
+		width: 87%;
+		font-size: @font15;
+		border-right: @border;
+		& > div > ul {
+			margin: @content-margin;
+			li {
+				margin: 20px 0;
+				span {
+					display: inline-block;
+					vertical-align: top;
+				}
+				& > span:first-child {
+					width: 75px;
+					color: @grey;
+					text-align: right;
+					margin-right: 40px;
+				}
+				.span-sec {
+					width: 738px;
+					color: @darker-grey;
+				}
+			}
+		}
+		#borrower-info .personal-info {
+			margin: 35px 53px;
+			& > ul {
+				.inline-block;
+				float: left;
+				width: 33.33%;
+				*width: 30%;
+				margin-bottom: 0;
+				font-size: @font15;
+				& > li {
+					margin-top: 15px;
+					span:first-child {
+						color: @grey;
+						margin-right: 10px;
+					}
+					span {
+						display: inline-block;
+						width: 85px;
+					}
+				}
+				& li:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+		#risk-control {
+			.measure {
+				margin-top: 35px;
+				padding: 0 40px;
+			}
+			.risk-control-content { margin: 0 38px 35px 38px; }
+		}
+        .risk-control-content .span-sec *{ color: @darker-grey; }
+		#relevant-info .content-null {
+			color: @dark-grey;
+			a { color: @blue; }
+		}
+		.photo-cell {
+			margin: 38px 28px 18px 28px;
+			.col-md-3 {
+				.thumbnail-custom {
+					margin-bottom: 0;
+					border-radius: 0;
+				}
+				.photo-title {
+					position: relative;
+					height: 21px;
+					top: -22px;
+					color: @white;
+					text-align: center;
+					background: #080808;
+					opacity: 0.5;
+					-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+					filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+				}
+			}
+		}
+		.modal-custom {
+			.modal-dialog .modal-content {
+				width: 800px;
+				left: 50%;
+				margin-left: -400px;
+				.modal-header-custom {
+					text-align: center;
+					padding: 10px 15px;
+				}
+				.modal-body-custom {
+					text-align: center;
+					span {
+						.inline-block;
+						width: 5%;
+						cursor: pointer;
+					}
+					.control-prev { text-align: left; }
+					.control-next { text-align: right; }
+					img { max-width: 88%; }
+				}
+			}
+		}
+		.invest-record, .repayment-task {
+			margin: @content-margin;
+			thead tr > th {background: #f4f4f4;}
+			tbody .account-style {color: @blue;}
+            table th, table td {
+                padding: 8px 8px 8px 30px;
+            }
+		}
+        .content-null { margin: @content-margin; }
+	}
+	.project-content-right {
+		width: 13%;
+		min-height: 1000px;
+		//*height: auto;
+        .notScroll {
+			position: relative;
+			left: -5px;
+		}
+		.scrolled {
+			position: fixed;
+			top: 35px;
+			left: 50%;
+			margin-left: 402px;
+		}
+		ul {
+			li{
+				margin-bottom: 20px;
+				&:hover, &.active {
+					a {
+						color: @blue;
+						span {background: @grey;}
+					}
+				}
+				a {
+					font-size: @font15;
+					color: grey;
+					text-decoration: none;
+					span {
+						display: inline-block;
+						width: 10px;
+						height: 10px;
+						border-radius: 10px;
+						border: 1px solid @grey;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	.project-detail-raw {
+		margin-bottom: 40px;
+		& > div { margin: 0 auto; }
+		.pro, .purchase, .profit, .guarantee {
+			width: 800px;
+			height: 180px;
+			padding: 60px 0 0 180px;
+			p {
+				font-size: @font15;
+				color: @dark-grey;
+			}
+			p:first-child {
+				color: @darker-grey;
+				font-weight: bold;
+			}
+		}
+		.pro { background: url("@{images}/pro-bg.png") no-repeat left center; }
+		.purchase { background: url("@{images}/purchase-bg.png") no-repeat left center; }
+		.profit { background: url("@{images}/profit-bg.png") no-repeat left center; }
+		.guarantee { background: url("@{images}/guarantee-bg.png") no-repeat left center; }
+		.hr {
+			width: 910px;
+			height: 1px;
+			background: url("@{images}/newhand-hr.png");
+		}
+
+	}
+
+
+
+    .project-detail-huoqi{
+     
+        .pro{width: 820px;
+			height: 180px;
+			padding: 50px 0 0 190px;
+            margin:35px 70px 0 73px;
+			p {
+				font-size: @font15;
+				color: @dark-grey;
+			}
+			p:first-child {
+				color: @darker-grey;
+				font-weight: bold;
+			}
+            background: url("@{images}/pro-bg.png") no-repeat left center;
+        }
+       .fanwei{
+            margin-left:73px;   
+            width:833px;
+            height:35px;
+            border:1px solid #e6e6e6;  border-bottom:none;       
+            span{
+                margin:0;
+                height:35px;
+                display:inline-block;
+                width:675px;
+                padding:9px 0 9px 35px;
+                line-height:15px;
+                font-size:@font15;
+                color:@dark-grey;
+                
+            }
+            span:first-child{
+                width:150px;
+                color:#aaaaaa;
+                padding-left:30px;
+                border-right:1px solid #e6e6e6;
+            }
+        }
+       .fanwei:last-child{
+           border-bottom:1px solid #e6e6e6;
+           margin-bottom:35px;
+       }
+       
+         .fanwei1{
+            margin-left:73px;   
+            width:833px;
+            height:30px;
+            border:1px solid #e6e6e6;  border-bottom:none;       
+            span{
+                margin:0;
+                height:30px;
+                display:inline-block;
+                width:675px;
+                padding:7px 0 7px 35px;
+                line-height:15px;
+                font-size:@font15;
+                color:@dark-grey;
+                
+            }
+            span:first-child{
+                width:150px;
+                color:#aaaa9a;
+                padding-left:30px;
+                border-right:1px solid #e6e6e6;
+            }
+        }
+    }
+
+    .claims-detail{
+        & > div{
+            display:inline-block;
+            height:120px;
+            width:400px;
+            font-size:15px;
+            margin:30px 0 30px 0;
+        }
+        .claims-left, .claims-right{
+            div{
+               margin-bottom:11px;
+               span{
+                 display:inline-block; margin-left:32px; text-align:left; width:150px;
+               }
+               span:first-child{ color:#aaaaaa; text-align:right;}
+            }
+                           a{ text-decoration:none; font-size:15px; color:#37aaf0; margin-left:215px;
+               }           
+        }
+        .claims-left{border-right:1px solid #e6e6e6;}
+    }
+}
+
+.progress-bar-info{
+    background:@blue;
+}

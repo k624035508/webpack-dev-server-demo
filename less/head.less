@@ -1,0 +1,293 @@
+﻿/*head.less*/
+@import "common-style.less";
+@images: "../imgs/index";
+
+body { font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+div.ltie8 {
+    position: fixed;
+    top:0;
+    z-index: 9999;
+    width: 100%;
+    
+    margin: 0px auto;
+    text-align: center;
+    line-height: 60px;
+    font-size: @font18;
+    color: @dark-grey;
+    background: #f9d391;
+    a {
+        color: cornflowerblue;
+        &:hover { color: dodgerblue; }
+    }
+}
+
+div.container-fluid {
+    padding: 0;
+    min-width: @min-width;
+}
+
+ul, ol { margin-bottom: 0; }
+
+div.top-bar-wrap {
+    height: 40px;
+    .top-bar {
+        width: @min-width;
+        margin: 7px auto;
+        & > * { .inline-block; }
+        .top-bar-icon {
+            width: 26px;
+            height: 26px;
+            background: url("../imgs/index/head-icon.png");
+            display: inline-block;
+        }
+
+        .head-hot-line-icon { background-position: -15px -15px; }
+
+        .weibo-icon {
+            margin-left: 40px;
+            background-position: -15px -127px;
+            &:hover { background: url("../imgs/index/weibo-hover.png"); }
+        }
+
+        .wechat-icon {
+            margin-left: 25px;
+            background-position: -15px -71px;
+            &:hover { background: url("../imgs/index/wechat-hover.png"); }
+        }
+        .head-hot-line-num {
+            font-size: @font15;
+            color: @darker-grey;
+            margin-left: 5px;
+        }
+        .pull-right {
+            font-size: @font15;
+            line-height: 26px;
+            ul {
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 0 0 10px;
+                    a {
+                        color: @dark-grey;
+                        text-decoration: none;
+                        &:hover, &:focus { color: @blue; }
+                    }
+                   
+                    #apps {
+                        display: inline-block;
+                        width: 80px;
+                        height: 25px;
+                        background: url("../imgs/index/top-bar-app-icon.png");
+                    }
+                }
+                .hr-line { color: #bbbabf; }
+                .news-ring {
+                    cursor: pointer;
+                    background: url("../imgs/index/news-ring.png") no-repeat 10px center;
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        min-width: 17px;
+                        height: 13px;
+                        line-height: 12px;
+                        top: -7px;
+                        left:12px;
+                        text-align: center;
+                        font-size: @font12;
+                        color: @white;
+                        background: #1478d2;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.nav-bar-wrap {
+    height: 90px;
+    background: #fff;
+    .nav-active {
+        color: @blue !important;
+        border-bottom: 2px solid @blue;                                                            
+    }
+
+    .nav-bar {
+        width: @min-width;
+        font-size: @font17;
+        line-height: 60px;
+        margin: 0 auto;
+                              
+        nav.pull-right {
+            margin-top: 15px;
+            ul.list-inline {
+                li {
+                    padding: 0 0 0 40px;
+                    a {
+                        color: @darker-grey;
+                        padding-bottom: 13px;
+                        text-decoration: none;
+                        .arrowsituation{width:16px; height:16px; .inline-block;
+                              background:url("../imgs/index/bottom.jpg");
+                              margin-left:-3px;
+                         }
+                    }
+                       a.nav-active{
+                        .arrowsituation{
+                             background:url("../imgs/index/bottomhover.jpg");
+                        }
+                    }
+                    &:hover{
+                        a{
+                            .arrowsituation{
+                                background:url("../imgs/index/top.jpg");
+                            }
+                        }
+                    }
+                 }
+                li.li-active{
+                        &:hover{
+                        a.nav-active{
+                            .arrowsituation{
+                                background:url("../imgs/index/tophover.jpg");
+                            }
+                        }
+                    }
+                }
+                li:first-child { padding-left: 0;
+                }
+
+                 & > li > a:hover, & > li > a:focus {
+                     .nav-active;
+                       .arrowsituation{
+                            background:url("../imgs/index/tophover.jpg");
+                        }
+                 }
+                 
+
+                 .dropdown-menu-custom {
+                    top: 88%;
+                    left: 30%;
+                    min-width: 90px;
+                    margin: 0;
+                    padding: 0;
+                     border: none;
+                     border-radius:0;
+                    li {
+                        padding: 0;
+                       
+                        a {
+                            padding-bottom: 0;
+                            line-height: 36px;
+                            padding: 3px 11px;
+                        }
+
+                    }
+                    & li:first-child { border-top:2px solid @blue; }
+
+                 }
+            }
+        }
+        #myAccount:hover > .dropdown-menu-custom { display: block; }
+        #financial:hover > .dropdown-menu-custom { display: block; }
+    }
+}
+
+/*浮窗图标按钮*/
+div.floating-wrap {
+    position: fixed;
+    bottom: 75px;
+    left: 50%;
+    margin-left: 570px;
+    width: 50px;
+    a span {
+        display: block;
+        margin-bottom: 20px;
+    }
+    #floating-qq {
+        .floating-icon;
+        .qq-icon;
+        &:hover {
+            .qqHover-icon;
+        }
+    }
+    #floating-cal {
+        .floating-icon;
+        .cal-icon;
+        &:hover {
+            .calHover-icon;
+        }
+    }
+    #floating-top {
+        .floating-icon;
+        .top-icon;
+        &:hover {
+            .topHover-icon;
+        }
+    }
+    .floating-icon {
+        width: 50px;
+        height: 53px;
+        
+    }
+
+    .qq-icon {background: url("../imgs/index/qqIcon.png") no-repeat;}
+    .qqHover-icon {background: url("../imgs/index/qqhover.jpg") no-repeat;}
+
+    .cal-icon {background: url("../imgs/index/calIcon.png") no-repeat ;}
+    .calHover-icon {background: url("../imgs/index/calhover.jpg") no-repeat;}
+
+    .top-icon {background: url("../imgs/index/topIcon.png") no-repeat ;}
+    .topHover-icon {background: url("../imgs/index/topIconhover.jpg") no-repeat;}
+
+    //计算器
+    .cal-btn { padding: 0; }
+    .popover-content {
+        width: 235px;
+        padding: 10px;
+        font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        .cal-ul {
+            li {
+                margin-bottom: 10px;
+                & > * {
+                    display: inline-block;
+                    .ie7-inline-block;
+                }
+                span {
+                    color: @dark-grey;
+                    margin-right: 5px;
+                }
+                input {
+                    width: 120px;
+                    height: 30px;
+                    line-height: 29px;
+                    padding-left: 10px;
+                    margin-right: 5px;
+                    border: @border;
+                }
+                #profit {
+                    width: 120px;
+                    color: @red;
+                    padding-left: 10px;
+                }
+            }
+        }
+        .btn-wrap {
+            text-align: center;
+            #cal-btn {
+                width: 100px;
+                height: 32px;
+                color: @white;
+                font-size: @font15;
+                border: none;
+                border-radius: 4px;
+                margin-top: 10px;
+                background: @blue;
+            }
+        }
+    }
+}
+
+
+

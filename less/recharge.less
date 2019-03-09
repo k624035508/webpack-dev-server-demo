@@ -1,0 +1,117 @@
+/*recharge.less(会员中心我要充值)*/
+@import "../less/common-style.less";
+@import "../less/usercenter-common-style.less";
+@recharge: "../imgs/usercenter/recharge-icons";
+
+.bank-chose-th {
+	margin-bottom: 30px;
+	padding-bottom: 6px;
+	border-bottom: 2px solid @light-grey;
+	span{
+		margin-right: 20px;
+		a {
+			font-size: @font18;
+			color: @dark-grey;
+			text-decoration: none;
+			padding-bottom: 7px;
+			&.active { border-bottom: 2px solid @blue; }
+		}
+	}
+}
+
+.warm-tips { .th-grey-style; 
+             span{
+                 border-bottom-color:@blue;
+             }
+}
+.bank-select {
+	padding: 5px 15px 5px 135px;
+	li {
+		vertical-align: top;
+		width: 135px;
+		height: 35px;
+		padding: 0;
+		margin-right: 21px;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	#boc { background: url("@{recharge}/zhonghang.png"); }
+	#icbc { background: url("@{recharge}/gonghang.png"); }
+	#ccb { background: url("@{recharge}/jianhang.png"); }
+	#abc { background: url("@{recharge}/nonghang.png"); }
+	#cmb { background: url("@{recharge}/zhaohang.png"); }
+	#psbc { background: url("@{recharge}/youzheng.png"); }
+	#ceb { background: url("@{recharge}/guangda.png"); }
+	#cncb { background: url("@{recharge}/zhongxin.png"); }
+	#spdb { background: url("@{recharge}/pufa.png"); }
+	#cmsb { background: url("@{recharge}/minsheng.png"); }
+	#cgb { background: url("@{recharge}/guangfa.png"); }
+	#cib { background: url("@{recharge}/xingye.png"); }
+	#pab { background: url("@{recharge}/pingan.png"); }
+	#comm { background: url("@{recharge}/jiaohang.png"); }
+	#hxb { background: url("@{recharge}/huaxia.png"); }
+}
+.balance-recharge span:first-child, .amount-recharge span:first-child {
+	display: inline-block;
+	width: 118px;
+	margin-right: 10px;
+	color: @dark-grey;
+	text-align: right;
+}
+.balance-recharge {
+	font-size: @font15;
+	color: @red;
+	margin-bottom: 30px;
+}
+.amount-recharge {
+	font-size: @font15;
+	i {
+		display: inline-block;
+		vertical-align: top;
+		color: @red;
+		font-size: @font18;
+		font-weight: bolder;
+		margin-right: 8px;
+        font-style:normal;
+	}
+	input {
+		width: 200px;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 10px;
+		border: @border;
+		border-radius: 5px;
+	}
+}
+.rechargeBtn {
+	margin: 35px 0 30px 132px;
+	a {
+		display: inline-block;
+		width: 150px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		text-decoration: none;
+		color: @white;
+		font-size: @font20;
+		background: @red;
+		border-radius: 5px;
+        cursor:pointer;
+	}
+}
+.rechargeTips { .warm-tips-style;
+            .rechargeLimit{ 
+                color:@blue;
+                text-decoration:none;
+                &:hover{ color:@blue;}
+            }
+}
+
+#waitforPaymentDialog .modal-dialog .modal-content {
+	width: 600px;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+}

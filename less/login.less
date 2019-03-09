@@ -1,0 +1,98 @@
+/*login.less*/
+@import "common-style";
+@images: "../imgs/register";
+
+body { background: @body-color; }
+
+.top-bar #login { color: @blue !important; }
+
+div.login-box {
+	margin-top: 25px;
+	padding: 25px 10px 22px 30px;
+	height: 450px;
+	border: @border;
+	background: @white;
+	& > div {
+		.inline-block;
+		height: 400px;
+	}
+	.login-left {
+		width: 615px;
+		.title-tips {
+			font-size: @font25;
+			color: @blue;
+			margin-bottom: 40px;
+			padding-bottom: 12px;
+			border-bottom: @border;
+			span {
+				font-size: @font14;
+				color: @grey;
+				a {
+					color: @blue;
+					line-height: 35px;
+				}
+			}
+		}
+		.form-box {
+			margin-top: 48px;
+			label {
+				margin-right: 15px;
+				width: 95px;
+				font-size: @font15;
+				font-weight: normal;
+				color: @dark-grey;
+				text-align: right;
+			}
+			input {
+				width: 300px;
+				padding-left: 50px;
+				height: 45px;
+				line-height: 45px;
+				border: @border;
+				border-radius: 5px;
+				&:focus { outline-color: @blue; }
+			}
+			#account { background: url("@{images}/account.png") no-repeat; }
+			#psw { background: url("@{images}/psw.png") no-repeat; }
+		}
+		.agreement {
+			width: 300px;
+			color: @grey;
+			margin-top: 45px;
+			margin-left: 110px;
+			input {
+				-webkit-appearance: none;
+				width: 15px;
+				height: 15px;
+				border: @border;
+				border-radius: 0;
+				outline: none;
+				&:checked { background: url("@{images}/red-tick.png") no-repeat; }
+			}
+			label { font-weight: normal; }
+			a { color: @blue; }
+		}
+		.login-btn {
+			margin-top: 15px;
+			padding-left: 110px;
+			button {
+				width: 300px;
+				height: 45px;
+				color: @white;
+				font-size: @font22;
+				background: @red;
+				border-radius: 4px;
+				border: none;
+			}
+		}
+	}
+	.dividing-hr {
+		margin-left: 30px;
+		width: 1px;
+		background: @light-grey;
+	}
+	.login-right {
+		width: 400px;
+		background: url("@{images}/login-bg.jpg") no-repeat;
+	}
+}

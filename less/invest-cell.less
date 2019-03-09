@@ -1,0 +1,143 @@
+﻿/*invest-cell.less(投资列表单个模块样式)*/
+@import "common-style.less";
+@images: "../imgs/index";
+
+div.invest-cell {
+    width: @min-width;
+    margin: 25px auto 0 auto;
+    border: @border;
+    .invest-title-wrap {
+        height: 60px;
+        padding: 14px 35px;
+        background: @white;
+        border-bottom: @border;
+        & > * { .inline-block; }
+        .invest-list-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .jian-icon { background: url("@{images}/jian.png") no-repeat; }
+
+        .xin-icon { background: url("@{images}/xin.png") no-repeat; }
+
+        .yue-icon { background: url("@{images}/yue.png") no-repeat; }
+        span a {
+            font-size: @font20;
+            color: @darker-grey;
+            text-decoration: none;
+            &:hover { color: @red; }
+        }
+
+        .acceptance-bank {
+            margin: 7px 0;
+            i {
+                display: inline-block;
+                vertical-align: top;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                background: url("@{images}/bank.png");
+            }
+        }
+    }
+    .invest-content {
+        & > div {
+            float: left;
+            .inline-block;
+        }
+        height: 100px;
+        padding: 16px 35px;
+        margin: 0;
+        background: @white;
+        &:hover { background: #f0f5ff; }
+        .apr { width: 19%; }
+        .deadline { width: 20%; }
+        .sum { width: 24%; }
+        .repayment {
+            width: 25%;
+            .progress-custom {
+                width: 125px;
+                height: 15px;
+                margin-bottom: 10px;
+                background: #cdcdcd;
+                .progress-bar-info {
+                    line-height: 14px;
+                    background-color: #38aaf0 !important;
+                }
+            }
+        }
+        .invest-btn {
+            width: 12%;
+            text-align: right;
+            a {
+                display: inline-block;
+                width: 115px;
+                height: 35px;
+                line-height: 35px;
+                margin-top: 16.5px;
+                font-size: @font17;
+                border-radius: 4px;
+                text-align: center;
+                text-decoration: none;
+            }
+            .invest-now-btn {
+                color: @white;
+                background: @red;
+            }
+            .invest-full-btn {
+                color: @dark-grey;
+                background: @light-grey;
+            }
+        }
+    }
+}
+
+.grey13px {
+    color: @grey;
+    font-size: @font13;
+}
+
+.dark-grey13px {
+    color: @dark-grey;
+    font-size: @font13;
+}
+
+.grey15px {
+    color: @dark-grey;
+    font-size: @font15;
+}
+
+.grey25px {
+    color: @dark-grey;
+    font-size: @font25;
+}
+
+.red15px {
+    color: @red;
+    font-size: @font15;
+}
+
+.red25px {
+    color: @red;
+    font-size: @font25;
+}
+
+.margin-bottom10px { margin-bottom: 8px; }
+
+div.more-projects {
+    width: @min-width;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 25px auto 0 auto;
+    border: @border;
+    background: @white;
+    a {
+        color: @blue;
+        font-size: @font15;
+        text-decoration: none;
+        &:hover { color: #337ab7; }
+    }
+}

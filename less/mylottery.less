@@ -1,0 +1,128 @@
+/*mylottery.less（会员中心我的奖券）*/
+@import "common-style";
+@import "usercenter-common-style.less";
+
+.lotteries-wrap {
+	* {
+		color: @dark-grey;
+		font-size: @font15;
+	}
+	.lottery-cell {
+		width: 235px;
+		height: 130px;
+		border-radius: 4px;
+		& > div {
+			display: inline-block;
+			vertical-align: top;
+			height: 100%;
+		}
+		.lottery-face {
+			width: 183px;
+			.lottery-value {
+				font-size: @font32;
+				margin: 13px 10px;
+			}
+			.use-condition {
+				margin: 10px 0 5px 10px;
+				color: @grey;
+			}
+			.use-date {
+				margin:  0 0 0 10px;
+				color: @grey;
+			}
+		}
+		.lottery-state {
+			width: 50px;
+			padding: 25px 16px;
+			color: @white;
+			font-size: @font18;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+	.lottery-th {
+		padding-bottom: 6px;
+		border-bottom: 2px solid @light-grey;
+		span{
+			margin-right: 20px;
+			a {
+				font-size: @font18;
+				color: @dark-grey;
+				text-decoration: none;
+				padding-bottom: 7px;
+				&.active { border-bottom: 2px solid @blue; }
+			}
+		}
+	}
+	.lottery-content {
+		height: 360px;
+		padding-top: 25px;
+		.lottery-list { width:853px;
+			& > div {
+				display: inline-block;
+				margin: 10px 60px 40px 0;
+			}
+			.interest-rate-ticket, .interest-rate-ticket-guoqi {
+                background:url("../imgs/usercenter/blue.png") no-repeat;
+				width:220px; height:100px;
+                &>div{display:inline-block; float:left;}
+                .lottery-title{ width:40px; font-size:20px; color:@white; padding-left:13px; line-height:25px; padding-top:10px;}
+                .lottery-face{width:155px; padding-left:19px;
+                              .lottery-value{ margin-bottom:0;
+                                  span{
+                                      color:@blue; font-size:20px;
+                                  }
+                                  span:first-child{ font-size:40px; margin-right:3px;}
+                              }
+                              .use-condition{ margin-bottom:0; margin-top:-3px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                              .use-date{ margin-bottom:0; margin-top:-2px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                }
+                .lottery-state{width:25px; font-size:18px; color:@white; text-align:center; padding-top:12px; }
+			}
+
+            .hongbao, .hongbao-guoqi{
+                background:url("../imgs/usercenter/red.png") no-repeat;
+                width:220px; height:100px;
+                &>div{display:inline-block; float:left;}
+                .lottery-title{ width:40px; font-size:20px; color:@white; padding-left:13px; line-height:35px; padding-top:15px;}
+                .lottery-face{width:155px; padding-left:19px;
+                              .lottery-value{ margin-bottom:0;
+                                  span{
+                                      color:@red; font-size:20px;
+                                  }
+                                  span:first-child{ font-size:40px; margin-right:3px;}
+                              }
+                              .use-condition{ margin-bottom:0; margin-top:-3px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                              .use-date{ margin-bottom:0; margin-top:-2px;
+                                  span{font-size:13px; color:@dark-grey;}}
+                }
+                .lottery-state{width:25px; font-size:18px; color:@white; text-align:center; padding-top:12px; }
+            }
+            .interest-rate-ticket-guoqi, .hongbao-guoqi{background:url("../imgs/usercenter/grey.png") no-repeat;
+                                                        .lottery-face{
+                                                            .lottery-value{
+                                                                span{color:#d2d2d2;}
+                                                            }
+                                                        }
+            }
+		}
+		.lottery-history {
+			table {
+				border: @border;
+				th, td { padding: 13px 8px 13px 35px; }
+				th {
+					font-weight: normal;
+					border-bottom: @border;
+					background: @body-color;
+				}
+				td { border-top: @border; }
+			}
+		}
+	}
+
+	.use-rules-th { .th-grey-style; }
+	.use-rules { .warm-tips-style; }
+}

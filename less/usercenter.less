@@ -1,0 +1,246 @@
+﻿/*usercenter.less(会员中心)*/
+@import "common-style";
+@usercenter: "../imgs/usercenter";
+
+body { background: @body-color; }
+div.usercenter {       
+	tr.detailRow { cursor:default; }
+	.expandable-table tr.detailRow { cursor: pointer;}
+	
+	& > div.nav-left, &>div.content-right, &>div.personal-info-content{
+		display: inline-block;
+		.ie7-inline-block;
+		vertical-align: top;
+	}
+
+	.nav-left {	
+        min-height:500px;
+		width: 230px;
+		margin-right: 15px;
+		*margin-right: 10px;
+		.total-account {
+            border: 1px solid @blue;
+            border-bottom:none;
+			height: 180px;
+			background: @blue;
+			color: @white;
+			padding: 25px 15px;
+			.account-h { font-size: @font20; }
+			.account-num {
+				text-align: right;
+				padding-top: 50px;
+				span { font-size: @font15; }
+				& span:first-child { font-size: @font30; }
+			}
+		}
+		.outside-ul {
+            border: 1px solid @blue;
+            border-top:none;
+			a {
+				display: inline-block;
+				.ie7-inline-block;
+				width: 200px;
+				height: 25px;
+                margin-left:26px;
+				line-height: 25px;
+				text-decoration: none;
+				color: @dark-grey;
+                padding-left:52px;
+                cursor:pointer;
+			}
+			& > li {
+				font-size: @font18;				
+				line-height: 55px;
+                border-bottom:1px solid @white;
+                cursor:pointer;
+			}
+			& li:first-child {
+				background: @white;
+				.active { color: @blue; }
+				&:hover, &:focus {
+					.account-link { .active; }
+				}
+			}
+			.account-link { background: url("@{usercenter}/overview2.png") no-repeat; }
+			.funds { background: url("@{usercenter}/funds2.png") no-repeat;
+                    div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat; margin-left:45px;}
+                     div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+			}
+			.investing { background: url("@{usercenter}/investing2.png") no-repeat; 
+                      div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat;  margin-left:45px;}
+                      div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+			}
+			.account { background: url("@{usercenter}/account2.png") no-repeat; 
+                     div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat;  margin-left:45px;}
+                      div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+			}
+            .pointMall { background: url("@{usercenter}/mypoints.png") no-repeat;
+                     div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat;  margin-left:45px;}
+                      div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+            }
+			.news { background: url("@{usercenter}/news2.png") no-repeat;
+                     div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat;  margin-left:45px;}
+                      div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+			}
+            .myloan{background: url("@{usercenter}/myloan2.png") no-repeat;
+                    div{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jia.png") no-repeat;  margin-left:45px;}
+                    div.jian{ display: inline-block; width:15px; height:15px; background: url("@{usercenter}/jian.png") no-repeat; margin-left:45px;}
+            }
+		}
+		.inner-ul {
+			& > li {
+				font-size: @font15;
+				line-height: 35px;
+				background: @white;
+				&:hover, &:focus, &.nav-active {
+					background: #e1e1e1;
+					border-left: 3px solid @blue;
+					a { outline: 0; }
+				}
+			}
+		}
+        .hot-act{
+            height:195px; width:230px; background:@white; margin-top:45px;
+            .hot-title{ 
+                height:35px; border-bottom:1px solid @body-color; font-size:18px; padding-top:5px; padding-left:15px; color:@dark-grey;
+            }
+           ul{
+               height:20px; text-align:center; padding-left:100px;              
+               li{
+                   float:left; width:15px; color:@body-color;cursor:pointer;                  
+               }               
+               li.current-li{color:@blue;}
+            }
+        }
+        .hot-img {
+            width:205px; height:125px;  margin-top:13px; margin-left:13px; position:relative;
+            a{width:100%; height:100%; display:inline-block;}
+            & > div{ position:absolute; bottom:0; height:25px; width:205px; text-align:center; font-size:17px; background-color:rgba(0,0,0,0.3); color:@white; line-height:25px; }
+        }
+        //.hot-img-bg2{background:url("@{usercenter}/activity2.jpg");}
+	}
+
+	.content-right {
+		width: 855px;
+		background: @white;
+		border: @border;
+
+		//会员中心内容头部
+		.overview-head {
+			height: 178px;
+			padding: 30px 25px;
+			border-bottom: @border;
+			p { margin: 0; }
+			& > div { .inline-block; }
+			.head-left {
+				width: 310px;
+				.username {
+					font-size: @font25;
+					color: @dark-grey;
+				}
+				.save-level {
+					font-size: @font18;
+					color: @dark-grey;
+					.level-icon {
+						display: inline-block;
+						.ie7-inline-block;
+						vertical-align: top;
+						width: 38px;
+						height: 23px;
+						margin-left: 10px;
+						background-repeat: no-repeat;
+					}
+					.low { background: url("@{usercenter}/low.png"); }
+					.middle { background: url("@{usercenter}/middle.png"); }
+					.high { background: url("@{usercenter}/high.png"); }
+				}
+				.login-time {
+					font-size: @font18;
+					color: @grey;
+				}
+				.save-level, .login-time { margin-top: 16px; }
+			}
+			.head-center {
+				margin: 9px 0 0 85px;
+				font-size: @font18;
+				p {
+					span { color: @red; }
+					& span:first-child { color: @dark-grey; }
+				}
+				.balance-frozen { margin-top: 50px; }
+			}
+			.head-right {
+				& > a {
+					display: block;
+					width: 130px;
+					height: 45px;
+					line-height: 45px;
+					color: @white;
+					font-size: @font20;
+					text-align: center;
+					text-decoration: none;
+					border-radius: 5px;
+				}
+				.recharge { background: @red; }
+				.withdraw {
+					background: @blue;
+					margin-top: 26px;
+				}
+			}
+		}
+
+		.content-body {
+			padding: 30px 25px 30px 25px;
+			min-height: 710px;
+		}
+        .content-body-loaner {
+			padding: 30px 25px 30px 25px;
+			min-height: 710px;
+		}
+	}
+	//会员中心翻页页码样式
+	div.nav {
+		text-align: center;
+		.pagination { 
+			& > li > a, & > li > span {
+				width: 25px;
+				height: 25px;
+				padding: 0;
+				margin: 0 2px;
+				line-height: 24px;
+				font-size: @font13;
+				color: @dark-grey;
+				border: @border;
+				border-radius: 0;
+			}
+			.active a, .active span {
+				color: @white;
+				background: @blue;
+			}
+		}
+	}
+}
+        .questionConfirm-dialog{
+           margin-top:13%; 
+           .modal-content{
+               width:600px; height:340px;
+               padding: 0 30px 10px 30px;
+               border:none;
+               .modal-header{
+                   h4{color:@darker-grey; font-weight:bold;}
+               }
+               .modal-body{
+                   p{font-size:25px;color:@darker-grey; width:100%; text-align:center; margin-top:30px;}
+                   a{
+                       display:inline-block; width:150px; height:50px; font-size:20px; color:@white; background:@red; line-height:50px; text-decoration:none; 
+                       border-radius:5px; text-align:center;
+                       margin:35px 0 60px 170px;
+                   }
+                   .questionp{
+                       text-align:right;
+                       .strongMan{font-size:@font13; color:#aaaaaa; cursor:default;}
+                       span{color:@red; cursor:pointer;font-size:@font13;}
+                   }
+               }
+           }
+        }

@@ -1,0 +1,48 @@
+/*myinvest.less（会员中心我的投资）*/
+@import "common-style";
+
+.myinvest-wrap {
+	.ul-header {
+		* {
+			color: @dark-grey;
+			font-size: @font15;
+		}
+		li {
+			width: 26.66%;
+			*width: 24%;
+			height: 55px;
+			text-align: center;
+			vertical-align: middle;
+			background: @body-color;
+			p { margin: 5px 0; }
+		}
+		li.myinvest-tab { cursor: pointer; }
+		li.active {
+			background: @white;
+			border-top: 2px solid @blue;
+			cursor: auto;
+		}
+		.operator {
+			width: 10%;
+			line-height: 55px;
+		}
+	}
+	.total-invest {
+		height: 310px;
+		ul { .ul-header; }
+	}
+	#invest-bar, #profit-bar {
+		margin-top: 30px;
+		width: 100%;
+		height: 220px;
+	}
+	.divider {
+		height: 19px;
+		margin: 0 -25px;
+		background: @body-color;
+	}
+	.total-profit {
+		padding-top: 30px;
+		ul { .ul-header; }
+	}
+}

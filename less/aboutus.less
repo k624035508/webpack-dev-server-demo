@@ -1,0 +1,552 @@
+/*aboutus.less（关于我们）*/
+@import "common-style";
+@images: "../imgs/aboutus";
+@picWall: "../imgs/aboutus/picWall";
+
+body { background: @body-color; }
+
+.about-nav-bar {
+	height: 80px;
+	background: #1478d2;
+	.content-wrap {
+		ul.list-inline{
+			&>li {
+				margin-left: 24px; 
+				a {
+					color: @white;
+					font-size: @font17; display:inline-block;	
+                    line-height:80px;				
+					text-decoration: none;
+                    vertical-align:middle;
+				}
+                  .arrowsituation{width:16px; height:16px; .inline-block;
+                              background:url("@{images}/bottom.png");                            
+                         }
+                                      &:hover{
+                        a{
+                            .arrowsituation{
+                                background:url("@{images}/top.png");
+                            }
+                        }
+                    }
+			}
+			li:first-child { margin-left: 4px; }
+		}
+	}
+}
+.scroll-style {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+}
+
+.aboutPage {
+	.picWall-style {
+		li {
+			a, a span {
+				display: inline-block;
+				height: 181px;
+			}
+			.mask {
+				background: grey;
+				opacity: .3;
+				-moz-opacity: 0.30;
+				filter: alpha(opacity=30);
+			}
+			a:hover {
+				.mask { display: none; }
+			}
+		}
+	}
+	/*公司简介*/
+	#company {
+		height: 850px;
+		padding: 40px 0 60px 0;
+		background: @white;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/company-title.png") no-repeat center;
+			}
+			.content-body {
+				margin-top: 48px;					
+					color: @dark-grey;
+					font-size: 18px;
+					line-height: 39px;
+				img{margin-left:370px; margin-bottom:47px;}
+                p{text-indent:36px; margin-bottom:0;}
+			}
+		}
+	}
+	/*企业文化*/
+	#culture {
+		height: 450px;
+		padding-top: 40px;
+		background: #1071cc;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/culture-title.png") no-repeat center;
+			}
+			.content-body {
+				height: 220px; width:1000px;
+				margin-top:30px; padding-left:40px;
+				
+				background: url("@{images}/culture-icon2.png") no-repeat right center;
+				.description {
+					width: 820px;
+					color: @white;
+					font-size: 17px;
+					line-height: 40px;
+                    p{ margin-bottom:8px;
+                        span{
+                            display:inline-block; font-weight:bold; width:120px;
+                        }
+                    }
+				}
+			}
+		}
+	}
+	/*大事记*/
+	#events {
+		height: 600px;
+		padding-top: 24px;
+		background: url("@{images}/events-bg.jpg") no-repeat center;
+		.title {
+			height: 110px;
+			background: url("@{images}/events-title.png") no-repeat center;
+		}
+		.description {
+			height: 380px;
+			background: url("@{images}/events2.png") no-repeat center;
+		}
+	}
+	/*管理团队*/
+	#manager {
+		height: 820px;
+		padding-top: 40px;
+		background: #1478d2;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/manager-title2.png") no-repeat center;
+			}
+			.description {
+				margin-top: 50px;
+				padding: 0 5%;
+				& > * {
+					display: inline-block;
+					float: left;
+				}
+				& > span {
+					width: 1px;
+					height: 575px;
+					margin-top: 20px;
+					background: #6cb9fd;
+				}
+				& > div {
+					display: inline-block;
+					width: 33%;
+					.personal-info {
+						color: @white;
+						line-height: 26px;
+						padding: 0 30px;
+						.name, .position { text-align: center; }
+						.name {
+							font-size: @font25;
+							margin: 25px 0;
+						}
+						.position { font-size: @font20; }
+						.introduce {
+							font-size: @font15;
+							text-indent: 2em;
+                            margin-top: 30px;
+						}
+					}
+					.chenmaoqiang {
+						height: 225px;
+						background: url("@{images}/chenmaoqiang.png") no-repeat center;
+					}
+					.mazong {
+						height: 225px;
+						background: url("@{images}/mazong.jpg") no-repeat center;
+					}
+					.lixiangnan {
+						height: 225px;
+						background: url("@{images}/lixiangnan.png") no-repeat center;
+					}
+				}
+				& > div:first-child {
+					border-left: none;
+					.personal-info {
+						padding: 0 !important;
+						.introduce { margin: 30px 28px 0 28px; }
+					}
+				}
+			}
+		}
+	}
+    /*顾问团队*/
+	#advisor {
+		height: 800px;
+		padding-top: 5px;
+		background: #1478d2;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/manager-title3.png") no-repeat center;
+			}
+			.description {
+				margin-top: 50px;
+				padding: 0 5%;
+				& > * {
+					display: inline-block;
+					float: left;
+				}
+				& > span {
+					width: 1px;
+					height: 575px;
+					margin-top: 20px;
+					background: #6cb9fd;
+				}
+				& > div {
+					display: inline-block;
+					width: 49%;
+					.personal-info {
+						color: @white;
+						line-height: 26px;
+						padding: 0 30px;
+						.name, .position { text-align: center; }
+						.name {
+							font-size: @font25;
+							margin: 25px 0;
+						}
+						.position { font-size: @font20; }
+						.introduce {
+                           
+							font-size: @font15;
+							text-indent: 2em;
+                            margin-top: 30px;
+                            margin-left:20% !important;
+                            margin-right:20% !important;
+						}
+					}
+					.xuan {
+						height: 225px; 
+						background: url("@{images}/xuanjinghui.png") no-repeat center;
+					}
+					.lawer {
+						height: 225px;
+						background: url("@{images}/lawer.jpg") no-repeat center;
+					}
+				}
+				& > div:first-child {
+					border-left: none;
+					.personal-info {
+						padding: 0 !important;
+						.introduce { margin: 30px 28px 0 28px; }
+					}
+				}
+			}
+		}
+	}
+	/*合作机构*/
+	#agency {
+		height: 685px;
+		padding-top: 40px;
+		background: url("@{images}/culture-bg.png");
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/agency-title.png") no-repeat center;
+			}
+			.description {
+				margin-top: 45px;
+				text-align: center;
+				& > div {
+					display: inline-block;
+					vertical-align: top;
+					width: 40%;
+					.sumapay {
+						height: 175px;
+						margin-bottom: 25px;
+						background: url("@{images}/sumapay.jpg") no-repeat center;
+					}
+					.law-yingke {
+						height: 175px;
+						margin-bottom: 25px;
+						background: url("@{images}/lawyer-yingke.png") no-repeat center;
+					}
+					.name {
+						width: 90%;
+						margin: 0 auto;
+						text-align: center;
+						border-bottom: 1px solid @dark-grey;
+						.name-style {
+							color: @dark-grey;
+							font-size: @font25;
+							margin-bottom: 18px;
+						}
+					}
+					.info {
+						margin-top: 18px;
+						p {
+							color: @dark-grey;
+							font-size: @font15;
+							line-height: 28px;
+							text-align: left;
+						}
+					}
+				}
+				.nanyue-wrap { margin-right: 110px; }
+			}
+		}
+	}
+	/*员工风采*/
+	#staff {
+		height: 625px;
+		padding-top: 40px;
+		background: @white;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/staff-title.png") no-repeat center;
+			}
+			.description {
+				margin-top: 50px;
+				text-align: center;
+				.picWall-style;
+				.picWall {
+					width: 80%;
+					margin: 0 auto;
+					li {
+						padding: 0;
+						a, a span { width: 270px; }
+					}					
+					.staff01 { background: url("@{picWall}/staff01B-bg .png") center; }				
+					.staff02 { background: url("@{picWall}/staff02B-bg .png") center; }
+					.staff03 { background: url("@{picWall}/staff03B-bg .png") center; }
+					.staff04 { background: url("@{picWall}/staff04B-bg .png") center; }
+					.staff05 { background: url("@{picWall}/staff05B-bg .png") center; }
+					.staff06 { background: url("@{picWall}/staff06B-bg .png") center; }
+				}
+			}
+		}
+	}
+	/*办公环境*/
+	#office {
+		height: 625px;
+		padding-top: 40px;
+		background: #1478d2;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/office-title.png") no-repeat center;
+			}
+			.description {
+				margin-top: 50px;
+				text-align: center;
+				.background {
+					width: 835px;
+					height: 367px;
+					margin: 0 auto;
+					background: @white;
+					.picWall-style;
+					.picWall {
+						margin-left: 0%;
+						li {
+							padding: 0 .5px;
+							a, a span { width: 270px;  }
+						}
+						.office01 { background: url("@{picWall}/office08-bg.jpg") center; }
+						.office02 { background: url("@{picWall}/office02-bg.png") center; }
+						.office03 { background: url("@{picWall}/office03-bg.png") center; }
+						.office04 { background: url("@{picWall}/office04-bg.png") center; }
+						.office05 { background: url("@{picWall}/office05-bg.png") center; }
+						.office06 { background: url("@{picWall}/office06-bg.png") center; }
+					}
+				}
+			}
+		}
+	}
+	/*公司资质*/
+	#qualification {
+		height: 704px;
+		padding-top: 40px;
+		background: url("@{images}/culture-bg.png");
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/qualification-title.png") no-repeat center;
+			}
+			.description {
+				text-align: center;
+				margin-top: 50px;
+				.business-license {
+                    display:inline-block;
+					width: 248px;
+					height: 350px;
+					cursor: pointer;
+					background: url("@{images}/license4-bg.jpg") no-repeat;
+				}
+                .business-beian {
+                    margin-top:35px;
+                    margin-left:425px;					
+					width: 248px;
+					height: 84px;
+					cursor: pointer;
+					background: url("@{images}/beian-bg3.jpg") no-repeat;
+				}
+			}
+		}
+	}
+	/*战略合作*/
+	#strategy {
+		height: 370px;
+		padding-top: 40px;
+		background: @white;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/strategy-title.png") no-repeat center;
+			}
+			.description {
+				margin-top: 70px;
+				.strategy-content {
+					height: 90px;
+					line-height: 118px;
+					color: @grey;
+					font-size: @font22;
+					text-align: center;
+					& > div{ width:210px; height:70px; display:inline-block; margin-right:5px;}
+                    .team-con1 { background:url("@{images}/team1.jpg");}
+                    .team-con2 { background:url("@{images}/team2.jpg");}
+                    .team-con3 { background:url("@{images}/team3.jpg");}
+                    .team-con4 { background:url("@{images}/team4.jpg");}
+                    .team-con5 { background:url("@{images}/team5.jpg"); margin-right:0;}
+				}
+			}
+		}
+	}
+	/*联系方式*/
+	#contact {
+		height: 540px;
+		padding-top: 40px;
+		background: #1478d2;
+		.content-wrap {
+			.title {
+				height: 110px;
+				background: url("@{images}/contact-title.png") no-repeat center;
+			}
+			.description {
+				margin-top: 80px;
+				& > div {
+					display: inline-block;
+					vertical-align: top;
+					width: 45%;
+					float: left;
+				}
+				.add-wrap {
+					width:520px; margin-right:80px;
+					address {
+						color: @white;
+						font-size: @font20;
+						line-height: 45px;
+						strong {
+							display: inline-block;
+							width: 80px;
+							text-align: right;
+						}
+                        span{float:right; display:inline-block; width:420px;}
+					}
+				}
+				.qrCode {
+					color: @white;
+					line-height: 45px;
+					p { font-size: @font20; }
+					& > div {
+						display: inline-block;
+						vertical-align: bottom;
+						float: left;
+						width: 157px;
+						text-align: center;
+						p { font-size: @font18; }
+						span {
+							display: block;
+							height: 157px;
+						}
+						.wechat-code { background: url("@{images}/wechat-code.png") no-repeat center ; }
+						.subscription-code { background: url("@{images}/subscription-code.png") no-repeat center ; }
+					}
+					.wechat { margin-right: 120px; }
+				}
+			}
+		}
+	}
+}
+
+
+.unselectable {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#picModal {
+	.modal-dialog {
+		width: 850px;
+		margin: 30px auto;
+		.modal-content .modal-body img { max-width: 100%; }
+	}
+}
+
+
+#picWall {
+	* { .unselectable; }
+	.modal-dialog {
+		width: 950px;
+		margin: 30px auto;
+		.modal-content .modal-body {
+			& > * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			span {
+				width: 5%;
+				height: 50px;
+				line-height: 50px;
+				cursor: pointer;
+				text-align: center;
+			}
+			div {
+				width: 88%;
+				text-align: center;
+				img { max-width: 100%; }
+			}
+		}
+	}
+}
+                  
+                   .dropdown-menu-custom {                  
+                    min-width: 90px;
+                    margin: 0;
+                    padding: 0;
+                     border: none;
+                     border-radius:0;
+                    &>li {
+                        padding: 0;   margin: 0!important;          height:42px;         
+                        a {
+                            
+                            color:@darker-grey!important;
+                             line-height:42px!important;
+                             font-size:14px!important;
+                        }
+                    }
+                    & li:first-child { border-top:2px solid @blue; }
+                 }
+                  
+
+ #aboutmore:hover > .dropdown-menu-custom { display: block; margin-top:-20px; }

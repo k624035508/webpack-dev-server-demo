@@ -1,0 +1,68 @@
+/*common-style.less*/
+@font12: 12px;
+@font13: 13px;
+@font14: 14px;
+@font15: 15px;
+@font17: 17px;
+@font18: 18px;
+@font20: 20px;
+@font22: 22px;
+@font25: 25px;
+@font30: 30px;
+@font32: 32px;
+@font35: 35px;
+@font40: 40px;
+@blue: #37aaf0;
+@darker-grey: #464646;
+@dark-grey: #646464;
+@grey: #aaa;
+@light-grey: #e6e6e6;
+@red: #ff414b;
+@white: #fff;
+@body-color: #f2f2f2;
+@border: 1px solid @light-grey;
+@border-dashed: 1px dashed @light-grey;
+@min-width: 1100px;
+
+
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* ie7 inline-block hack */
+.list-inline > li, .glyphicon, .inline-block, .ie7-inline-block {
+	*display: inline;
+	*zoom:1;
+}
+.list-unstyled {
+	*margin: 0;
+}
+/* hack end */
+
+.invest-style-tab {
+	font-size: @font20;
+	color: @blue;
+	padding: 1px 5px;
+	margin-right: 10px;
+	border: 1px solid;
+}
+
+.breadcrumbs {
+	width: @min-width;
+	font-size: @font15;
+	margin: 20px auto;
+	color: @darker-grey;
+	a {
+		text-decoration: none;
+		color: @darker-grey;
+		&:hover { color: @red; }
+	}
+}
+
+.content-wrap {
+	width: @min-width;
+	margin: 0 auto;
+}
+
+button { outline: none; }
