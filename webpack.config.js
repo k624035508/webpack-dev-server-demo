@@ -40,11 +40,11 @@ module.exports = {
 
 			// Needed for the css-loader when [bootstrap-webpack](https://github.com/bline/bootstrap-webpack)
 			// loads bootstrap's css.
-			{ test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-			{ test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,   loader: "url-loader?limit=10000&mimetype=application/font-woff2" },
-			{ test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
-			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file-loader" },
-			{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
+			{ test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+			{ test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff2" },
+			{ test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
+			{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
 		]
 	},
 	plugins: [
@@ -60,9 +60,9 @@ module.exports = {
 			"root.jQuery": "jquery"
 		}),
 		new webpack.DefinePlugin({
-            TEMPLATE_PATH : JSON.stringify("/templates/AnGuang"),
-            USER_CENTER_ASPX_PATH : JSON.stringify("/aspx/main/usercenter.aspx")
-        })
+			TEMPLATE_PATH: JSON.stringify("/templates/AnGuang"),
+			USER_CENTER_ASPX_PATH: JSON.stringify("/aspx/main/usercenter.aspx")
+		})
 	],
 	devServer: {
 		contentBase: "./build",//本地服务器所加载的页面所在的目录

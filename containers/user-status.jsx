@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from 'react-router';
 import { fetchWalletAndUserInfo } from "../actions/usercenter.js"
 import mask from "../js/mask.js";
-
+import { version, Button } from 'antd'
+import "antd/dist/antd.css";
 
 class UserStatus extends React.Component {
 	constructor(props) {
@@ -21,9 +22,9 @@ class UserStatus extends React.Component {
 		            {/* <div className="head-right pull-right">
 		            	<Link to="/recharge" className="recharge">充 值</Link>
 		            	<Link to="/withdraw" className="withdraw">提 现</Link>
-		            </div> */}
-		            <div className="head-left">
-		                <p className="username">您好！ {this.props.userName?this.props.userName:mask(this.props.nickName)}</p>
+					</div> */}
+		            <div className="head-left">		
+		                <p className="username">{version}您好！ {this.props.userName?this.props.userName:mask(this.props.nickName)}</p>
 		                <p className="save-level">安全级别 <Link className={"level-icon " + this.props.safeLevel}
 		                	title="到 “个人中心 -> 安全中心” 进行相关设置以提高安全等级" to="/safe"></Link></p>
 		                <p className="login-time">上次登录时间：{this.props.prevLoginTime}</p>
@@ -32,6 +33,7 @@ class UserStatus extends React.Component {
 		                <p className="balance">账户余额：<span>{this.props.idleMoney.format(2)}</span></p>
 		                <p className="balance-frozen">冻结金额：<span>{this.props.lockedMoney.format(2)}</span></p>
 		            </div>
+					<Button type="primary">Hello</Button>
 		        </div>
 
 		                {!this.props.isLoaner?    
