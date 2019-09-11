@@ -3,13 +3,6 @@ server:
 spring:
   application:
     name: eurekaclient
-    rabbitmq:
-        host: 127.0.0.1
-        port: 15672
-        username: guest
-        password: guest
-        virtualHost: /
-        publisherConfirms: true
 #   zipkin:
 #     base-url: http://localhost:9411
 #     sender:
